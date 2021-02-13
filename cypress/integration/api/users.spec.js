@@ -73,13 +73,12 @@ describe('Manipulando Usuário', () => {
       }).then((response) => {
         expect(response.status).to.eq(200)
         expect(response.body.data.name).to.eq('Pedro alterei aqui')
-        expect(response.body.data.id).to.eq(id)
       })
     })
   })
 
-  describe('Excluindo e visualizando usuário editado', () => {
-    it('Excluir usuário criado', () => {
+  describe('DELETE - Excluir o usuário que foi editado', () => {
+    it('Excluir usuário editado', () => {
       cy.request({
         method: 'DELETE',
         url: '/' + id,
@@ -92,7 +91,7 @@ describe('Manipulando Usuário', () => {
       })
     })
 
-    it('Retornar usuário excluído', () => {
+    it('GET - Retornar usuário excluído', () => {
       cy.request({
         method: 'GET',
         url: '/' + id,
@@ -107,5 +106,4 @@ describe('Manipulando Usuário', () => {
       })
     })
   })
-
 })
