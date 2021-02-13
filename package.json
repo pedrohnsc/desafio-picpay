@@ -1,0 +1,16 @@
+{
+  "name": "desafio-picpay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "open": "cypress open"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^6.4.0",
+    "faker": "^5.4.0"
+  }
+}
