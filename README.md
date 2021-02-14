@@ -15,7 +15,7 @@
 
 Todos os comandos abaixo são executados pelo _prompt de comando_.
 
-**1** - Clone o reporsitorio e acesse o diretório criado:
+**1** - Clone o repositório e acesse o diretório criado:
 
 ```sh
 git clone https://github.com/pedrohnsc/desafio-picpay.git && cd desafio-picpay 
