@@ -78,7 +78,7 @@ describe('Manipulando Usuário', () => {
   })
 
   describe('DELETE - Excluir o usuário que foi editado', () => {
-    it('Excluir usuário editado', () => {
+    it('DELETE - Excluir usuário editado', () => {
       cy.request({
         method: 'DELETE',
         url: '/' + id,
