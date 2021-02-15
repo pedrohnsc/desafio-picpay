@@ -3,7 +3,8 @@
 # Desafio para vaga de QA
 [![E2E library: Cypress](https://img.shields.io/badge/E2E%20Framework-Cypress-blue)](https://www.cypress.io/)
 
-
+## Introdução
+O Projeto foi construído utilizando a arquitetura padrão gerada pelo cypress, os testes se concentram dentro da pasta integration/api, e contempla todos os cenários solicitados pelo desafio, foi utilizado o [faker](https://www.npmjs.com/package/faker), para gerar randomicamente a massa de dados enviada nos testes.
 
 ## Execução
 

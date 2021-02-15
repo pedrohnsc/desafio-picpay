@@ -1,17 +1,34 @@
 {
   "name": "desafio-picpay",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desafio técnico para vaga de QA no PicPay",
   "main": "index.js",
   "scripts": {
     "open": "cypress open",
-    "cypress:run": "cypress run"
+    "cypress:run": "cypress run",
+    "lint": "standard",
+    "lint:fix": "standard --fix"
   },
   "keywords": [],
-  "author": "",
+  "author": "Pedro Henrique do Nascimento <pedrohnsc@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "cypress": "^6.4.0",
-    "faker": "^5.4.0"
+    "faker": "^5.4.0",
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [
+      "beforeEach",
+      "before",
+      "cy",
+      "Cypress",
+      "describe",
+      "expect",
+      "it",
+      "xit",
+      "File",
+      "DataTransfer"
+    ]
   }
 }

@@ -3,8 +3,8 @@
 import constants from '../../support/constants'
 
 describe('Manipulando Usuário', () => {
-  let token = `Bearer 2275e2cbbf8dc1d113b25fb018cdb2e07e088b35bb5f7b7c13ca160ed96a82ba`;
-  let id;
+  const token = 'Bearer 2275e2cbbf8dc1d113b25fb018cdb2e07e088b35bb5f7b7c13ca160ed96a82ba'
+  let id
 
   describe('POST de criar Usuario, GET, para listar o usuario, PUT alterar usuario, e DELETE deletar usuário', () => {
     before(('Post criar usuário', () => {
@@ -34,9 +34,9 @@ describe('Manipulando Usuário', () => {
         url: '/',
         headers: {
           Authorization: token,
-          'Content-type': 'application/json; charset=UTF-8',
+          'Content-type': 'application/json; charset=UTF-8'
         },
-        qs: { 'name': constants.RANDOM_NAME }
+        qs: { name: constants.RANDOM_NAME }
       }).then((response) => {
         expect(response.status).to.eq(200)
         expect(response.body.data[0].name).to.eq(constants.RANDOM_NAME)
@@ -50,7 +50,7 @@ describe('Manipulando Usuário', () => {
         method: 'PUT',
         url: '/' + id,
         body: {
-          name: 'Pedro alterei aqui',
+          name: 'Pedro alterei aqui'
         },
         headers: {
           Authorization: token,
@@ -68,7 +68,7 @@ describe('Manipulando Usuário', () => {
         url: '/' + id,
         headers: {
           Authorization: token,
-          'Content-type': 'application/json; charset=UTF-8',
+          'Content-type': 'application/json; charset=UTF-8'
         }
       }).then((response) => {
         expect(response.status).to.eq(200)
@@ -97,12 +97,12 @@ describe('Manipulando Usuário', () => {
         url: '/' + id,
         headers: {
           Authorization: token,
-          'Content-type': 'application/json; charset=UTF-8',
+          'Content-type': 'application/json; charset=UTF-8'
         },
-        qs: { 'name': 'Pedro alterei aqui' }
+        qs: { name: 'Pedro alterei aqui' }
       }).then((response) => {
+        expect(response.body.data[0]).to.not.exist
         expect(response.status).to.eq(200)
-        expect(response.body.data[0]).to.be.undefined
       })
     })
   })
