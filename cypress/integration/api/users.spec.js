@@ -2,11 +2,11 @@
 
 import constants from '../../support/constants'
 
-describe('Crud de usuários', () => {
+describe('Valida os endpoints de usuários', () => {
   let id
 
   describe('POST de criar Usuario, GET, para listar o usuario, PUT alterar usuario, e DELETE deletar usuário', () => {
-    before(('Post criar usuário', () => {
+    before(('Deve criar um usuário', () => {
       cy.request({
         method: 'POST',
         url: '/',
@@ -27,7 +27,7 @@ describe('Crud de usuários', () => {
       })
     }))
 
-    it('GET - Retornar usuário criado no POST de criar usuário', () => {
+    it('GET - Deve retornar usuário criado no POST de criar usuário', () => {
       cy.request({
         method: 'GET',
         url: '/',
@@ -43,7 +43,7 @@ describe('Crud de usuários', () => {
     })
   })
 
-  describe('PUT - Editar e visualizar usuário editado', () => {
+  describe('PUT - Deve editar e visualizar usuário editado', () => {
     it('PUT - Alterar usuário criado no before', () => {
       cy.request({
         method: 'PUT',
@@ -61,7 +61,7 @@ describe('Crud de usuários', () => {
       })
     })
 
-    it('GET - Retornar usuário alterado no PUT', () => {
+    it('GET - Deve retornar usuário alterado no PUT', () => {
       cy.request({
         method: 'GET',
         url: '/' + id,
@@ -76,7 +76,7 @@ describe('Crud de usuários', () => {
     })
   })
 
-  describe('DELETE - Excluir o usuário que foi editado', () => {
+  describe('DELETE - Deve excluir o usuário que foi editado', () => {
     it('DELETE - Excluir usuário editado', () => {
       cy.request({
         method: 'DELETE',
@@ -90,7 +90,7 @@ describe('Crud de usuários', () => {
       })
     })
 
-    it('GET - Retornar usuário excluído', () => {
+    it('GET - Deve retornar usuário excluído', () => {
       cy.request({
         method: 'GET',
         url: '/' + id,
