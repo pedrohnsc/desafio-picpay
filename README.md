@@ -28,7 +28,7 @@ git clone https://github.com/pedrohnsc/desafio-picpay.git && cd desafio-picpay
 npm install
 ```
 
-**3** - Você pode escolher rodar os testes no modo com interface gráfica(GUI) ou em Headless, para rodar com o GUI, digite o seguinte comando e depois dsso escolha qual spec você quer rodar:
+**3** - Você pode escolher rodar os testes no modo com interface gráfica(GUI) ou em Headless, para rodar com o GUI, digite o seguinte comando e depois disso escolha qual spec você quer rodar:
 
 ```sh
 npm run open
