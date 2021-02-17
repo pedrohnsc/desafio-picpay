@@ -2,8 +2,7 @@
 
 import constants from '../../support/constants'
 
-describe('Manipulando Usuário', () => {
-  const token = 'Bearer 2275e2cbbf8dc1d113b25fb018cdb2e07e088b35bb5f7b7c13ca160ed96a82ba'
+describe('Crud de usuários', () => {
   let id
 
   describe('POST de criar Usuario, GET, para listar o usuario, PUT alterar usuario, e DELETE deletar usuário', () => {
@@ -18,7 +17,7 @@ describe('Manipulando Usuário', () => {
           status: 'Active'
         },
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         }
       }).then((response) => {
@@ -33,7 +32,7 @@ describe('Manipulando Usuário', () => {
         method: 'GET',
         url: '/',
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         },
         qs: { name: constants.RANDOM_NAME }
@@ -53,7 +52,7 @@ describe('Manipulando Usuário', () => {
           name: 'Pedro alterei aqui'
         },
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         }
       }).then((response) => {
@@ -67,7 +66,7 @@ describe('Manipulando Usuário', () => {
         method: 'GET',
         url: '/' + id,
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         }
       }).then((response) => {
@@ -83,7 +82,7 @@ describe('Manipulando Usuário', () => {
         method: 'DELETE',
         url: '/' + id,
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         }
       }).then((response) => {
@@ -96,7 +95,7 @@ describe('Manipulando Usuário', () => {
         method: 'GET',
         url: '/' + id,
         headers: {
-          Authorization: token,
+          Authorization: constants.TOKEN,
           'Content-type': 'application/json; charset=UTF-8'
         },
         qs: { name: 'Pedro alterei aqui' }
