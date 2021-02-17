@@ -11,7 +11,7 @@ jobs:
     - name: Checkout do projeto
       uses: actions/checkout@v1
     - name: Setup do Node.js
-      uses: actions/setup-node@v1.1.0
+      uses: actions/setup-node@v2
     - name: Instalação das dependências de produção
       run: npm ci 
     - name: Execução dos testes
